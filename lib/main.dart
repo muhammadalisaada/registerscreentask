@@ -42,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent[50],
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -59,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       'Register',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 32,
+                        fontSize: 28,
                       ),
                     ),
                   ),
@@ -69,20 +68,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 40,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextField(
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
+                        filled: true,
                         fillColor: Colors.pink[100],
                         prefixIcon: const Icon(
                           Icons.person,
                         ),
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                            Radius.circular(15),
                           ),
                         ),
                         hintText: 'Full Name',
@@ -95,13 +95,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
+                        filled: true,
                         fillColor: Colors.pink[100],
                         prefixIcon: const Icon(
                           Icons.email,
                         ),
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                            Radius.circular(15),
                           ),
                         ),
                         hintText: 'Email',
@@ -115,6 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       obscureText: _obscureText,
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
+                        filled: true,
                         fillColor: Colors.pink[100],
                         suffixIcon: GestureDetector(
                           onTap: () {
@@ -131,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                            Radius.circular(15),
                           ),
                         ),
                         hintText: 'Password',
@@ -145,6 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       obscureText: _obscureText,
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
+                        filled: true,
                         fillColor: Colors.pink[100],
                         suffixIcon: GestureDetector(
                           onTap: () {
@@ -161,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                            Radius.circular(15),
                           ),
                         ),
                         hintText: 'Password',
@@ -174,13 +177,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextField(
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
+                        filled: true,
                         fillColor: Colors.pink[100],
                         prefixIcon: const Icon(
                           Icons.phone,
                         ),
                         border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                            Radius.circular(15),
                           ),
                         ),
                         hintText: 'Phone Number',
@@ -195,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 50,
                       decoration: BoxDecoration(
                         color: Colors.purple,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(25),
                       ),
                       child: TextButton(
                         onPressed: () {},
@@ -216,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 50,
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(25),
                           border: Border.all(width: 3, color: Colors.purple)),
                       child: TextButton(
                         onPressed: () {},
@@ -250,7 +254,7 @@ class WaveClipper extends CustomClipper<Path> {
     path.quadraticBezierTo(
         firststart.dx, firststart.dy, firstend.dx, firstend.dy);
 
-    var secondstart = Offset(size.width - (size.width / 3), size.height - 105);
+    var secondstart = Offset(size.width - (size.width / 3), size.height - 95);
     var secondend = Offset(size.width, size.height - 10);
 
     path.quadraticBezierTo(
